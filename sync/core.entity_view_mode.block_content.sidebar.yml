@@ -1,0 +1,10 @@
+uuid: 969317ab-faa1-4fb3-8c42-1d047fa863a4
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.sidebar
+label: Sidebar
+targetEntityType: block_content
+cache: true

@@ -1,0 +1,8 @@
+uuid: d77ad00e-9379-4d38-b509-6e2093bdbdca
+langcode: en
+status: true
+dependencies: {  }
+name: 'Social media categories'
+vid: social_media_categories
+description: ''
+weight: 0
