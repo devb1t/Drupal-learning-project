@@ -1,0 +1,32 @@
+uuid: b5507d43-400b-4845-95ed-9ab00a5c14db
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.advertisement_small
+  module:
+    - node
+    - views
+  theme:
+    - bartik
+id: views_block__advertisement_small_block_1
+theme: bartik
+region: sidebar_second
+weight: -11
+provider: null
+plugin: 'views_block:advertisement_small-block_1'
+settings:
+  id: 'views_block:advertisement_small-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      article: article

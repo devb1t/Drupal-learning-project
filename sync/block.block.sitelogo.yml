@@ -1,0 +1,25 @@
+uuid: a1bca80f-5f2c-4bd6-b4b8-0b031aef94e9
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:2d973282-9fe3-4251-84a0-72ea4204c703'
+  module:
+    - block_content
+  theme:
+    - bartik
+id: sitelogo
+theme: bartik
+region: header
+weight: 0
+provider: null
+plugin: 'block_content:2d973282-9fe3-4251-84a0-72ea4204c703'
+settings:
+  id: 'block_content:2d973282-9fe3-4251-84a0-72ea4204c703'
+  label: 'Site logo'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,39 @@
+uuid: 4801af62-feb6-4c37-839f-acf0907f11ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.social_media.field_social_media_category
+    - field.field.node.social_media.field_social_media_image
+    - field.field.node.social_media.field_social_media_link
+    - node.type.social_media
+  module:
+    - image
+    - user
+id: node.social_media.default
+targetEntityType: node
+bundle: social_media
+mode: default
+content:
+  field_social_media_category:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_social_media_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_social_media_link: true
+  links: true

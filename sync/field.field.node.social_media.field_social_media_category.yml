@@ -1,0 +1,29 @@
+uuid: 9e0b9327-3967-474c-b8ed-8cfa2253ca7b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_social_media_category
+    - node.type.social_media
+    - taxonomy.vocabulary.social_media_categories
+id: node.social_media.field_social_media_category
+field_name: field_social_media_category
+entity_type: node
+bundle: social_media
+label: 'Social Media Category'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      social_media_categories: social_media_categories
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

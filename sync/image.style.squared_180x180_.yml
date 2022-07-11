@@ -1,0 +1,15 @@
+uuid: d14d94a2-ae3f-4a7f-a9b3-9146a74924c6
+langcode: en
+status: true
+dependencies: {  }
+name: squared_180x180_
+label: 'Squared (180x180)'
+effects:
+  760e0bce-9421-453e-aeae-22ccd7e4dfa6:
+    uuid: 760e0bce-9421-453e-aeae-22ccd7e4dfa6
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 180
+      height: 180
+      anchor: center-center

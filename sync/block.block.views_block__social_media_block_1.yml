@@ -1,0 +1,24 @@
+uuid: fd889556-341f-4c87-ad98-beff25c4c998
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.social_media
+  module:
+    - views
+  theme:
+    - bartik
+id: views_block__social_media_block_1
+theme: bartik
+region: header
+weight: 0
+provider: null
+plugin: 'views_block:social_media-block_1'
+settings:
+  id: 'views_block:social_media-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }
