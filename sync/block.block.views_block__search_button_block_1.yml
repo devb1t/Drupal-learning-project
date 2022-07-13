@@ -1,21 +1,21 @@
-uuid: fd889556-341f-4c87-ad98-beff25c4c998
+uuid: 04d357c0-b323-462e-8e08-7ec4b67ca4af
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.social_media
+    - views.view.search_button
   module:
     - views
   theme:
     - bartik
-id: views_block__social_media_block_1
+id: views_block__search_button_block_1
 theme: bartik
 region: header
-weight: -9
+weight: -8
 provider: null
-plugin: 'views_block:social_media-block_1'
+plugin: 'views_block:search_button-block_1'
 settings:
-  id: 'views_block:social_media-block_1'
+  id: 'views_block:search_button-block_1'
   label: ''
   label_display: '0'
   provider: views
