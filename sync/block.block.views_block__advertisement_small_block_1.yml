@@ -6,6 +6,7 @@ dependencies:
     - views.view.advertisement_small
   module:
     - node
+    - system
     - views
   theme:
     - bartik
@@ -30,3 +31,7 @@ visibility:
       node: '@node.node_route_context:node'
     bundles:
       article: article
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/node/*'
