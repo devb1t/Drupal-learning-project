@@ -1,0 +1,15 @@
+uuid: 2dbf6b14-63cb-4e38-812a-631bf0c90d1d
+langcode: en
+status: true
+dependencies: {  }
+name: 385x175
+label: 385x175
+effects:
+  00e5f5ca-eeba-4d0d-beff-4e4338eb8e61:
+    uuid: 00e5f5ca-eeba-4d0d-beff-4e4338eb8e61
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 385
+      height: 175
+      anchor: center-center
