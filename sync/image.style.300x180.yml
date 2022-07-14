@@ -1,0 +1,15 @@
+uuid: bebac292-9712-4997-a058-0348a1347fdc
+langcode: en
+status: true
+dependencies: {  }
+name: 300x180
+label: 300x180
+effects:
+  72611e87-68e6-478d-9b6d-aaa48a12ecf1:
+    uuid: 72611e87-68e6-478d-9b6d-aaa48a12ecf1
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 300
+      height: 180
+      anchor: center-center
