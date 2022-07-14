@@ -1,0 +1,15 @@
+uuid: 1da9b3d6-3c2e-4f6b-ae98-99d0c5dc80a9
+langcode: en
+status: true
+dependencies: {  }
+name: 560x480
+label: 560x480
+effects:
+  b09bdf03-2d9a-4977-be14-be7b51888a65:
+    uuid: b09bdf03-2d9a-4977-be14-be7b51888a65
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 560
+      height: 480
+      anchor: center-center
