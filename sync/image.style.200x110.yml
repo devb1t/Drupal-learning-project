@@ -1,0 +1,15 @@
+uuid: 1b462f36-3c83-421c-9b95-2170e6337d22
+langcode: en
+status: true
+dependencies: {  }
+name: 200x110
+label: 200x110
+effects:
+  42e271eb-93af-478c-aaae-102d4753bd55:
+    uuid: 42e271eb-93af-478c-aaae-102d4753bd55
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 200
+      height: 110
+      anchor: center-center
