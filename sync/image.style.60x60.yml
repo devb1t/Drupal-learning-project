@@ -1,0 +1,15 @@
+uuid: 49a246a2-3ce8-44bb-b24b-49e3653d5af8
+langcode: en
+status: true
+dependencies: {  }
+name: 60x60
+label: 60x60
+effects:
+  e5819704-619b-40d5-b62e-4df5e300f91b:
+    uuid: e5819704-619b-40d5-b62e-4df5e300f91b
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 60
+      height: 60
+      anchor: center-center

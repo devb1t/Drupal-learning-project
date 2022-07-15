@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_image
-    - image.style.squared_180x180_
+    - image.style.60x60
     - node.type.article
     - taxonomy.vocabulary.categories
   content:
@@ -266,7 +266,7 @@ display:
           type: image
           settings:
             image_link: ''
-            image_style: squared_180x180_
+            image_style: 60x60
             image_loading:
               attribute: lazy
           group_column: ''
