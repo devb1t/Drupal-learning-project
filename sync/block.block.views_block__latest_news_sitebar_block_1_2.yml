@@ -1,6 +1,6 @@
 uuid: f8e70bfc-b23a-445b-8752-e7e6fe97a707
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.latest_news_sitebar
