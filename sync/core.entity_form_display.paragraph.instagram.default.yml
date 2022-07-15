@@ -1,0 +1,27 @@
+uuid: 4fa2d05e-8baa-4fb7-ba6d-26216b17e3ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.instagram.field_instagram_icon
+    - field.field.paragraph.instagram.field_instagram_link
+    - paragraphs.paragraphs_type.instagram
+  module:
+    - link
+id: paragraph.instagram.default
+targetEntityType: paragraph
+bundle: instagram
+mode: default
+content:
+  field_instagram_link:
+    type: link_default
+    weight: 0
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_instagram_icon: true
+  status: true

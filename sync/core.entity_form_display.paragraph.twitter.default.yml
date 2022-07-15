@@ -1,0 +1,27 @@
+uuid: e120acfa-e340-44a9-8c5d-f22ac490e727
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.twitter.field_twitter_icon
+    - field.field.paragraph.twitter.field_twitter_link
+    - paragraphs.paragraphs_type.twitter
+  module:
+    - link
+id: paragraph.twitter.default
+targetEntityType: paragraph
+bundle: twitter
+mode: default
+content:
+  field_twitter_link:
+    type: link_default
+    weight: 0
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_twitter_icon: true
+  status: true

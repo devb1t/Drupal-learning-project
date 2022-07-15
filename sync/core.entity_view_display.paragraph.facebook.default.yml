@@ -1,0 +1,40 @@
+uuid: 626f8d03-5013-4384-afca-81eee9460ee5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.facebook.field_facebook_icon
+    - field.field.paragraph.facebook.field_facebook_link
+    - paragraphs.paragraphs_type.facebook
+  module:
+    - image
+    - link
+id: paragraph.facebook.default
+targetEntityType: paragraph
+bundle: facebook
+mode: default
+content:
+  field_facebook_icon:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_facebook_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

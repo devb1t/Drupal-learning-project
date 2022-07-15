@@ -1,0 +1,40 @@
+uuid: 57f08550-d593-4d0b-b4b1-66ec4f9127b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.twitter.field_twitter_icon
+    - field.field.paragraph.twitter.field_twitter_link
+    - paragraphs.paragraphs_type.twitter
+  module:
+    - image
+    - link
+id: paragraph.twitter.default
+targetEntityType: paragraph
+bundle: twitter
+mode: default
+content:
+  field_twitter_icon:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_twitter_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

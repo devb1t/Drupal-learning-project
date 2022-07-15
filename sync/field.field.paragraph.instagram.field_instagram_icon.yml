@@ -1,0 +1,38 @@
+uuid: 2ff7eed0-388b-4a4e-b6c8-b01a3403ac9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_instagram_icon
+    - paragraphs.paragraphs_type.instagram
+  module:
+    - image
+id: paragraph.instagram.field_instagram_icon
+field_name: field_instagram_icon
+entity_type: paragraph
+bundle: instagram
+label: Icon
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: 17656041-d03c-4d8f-bda9-0cfb4bc27bb0
+    alt: Instagram
+    title: ''
+    width: 410
+    height: 410
+field_type: image
