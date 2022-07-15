@@ -1,0 +1,30 @@
+uuid: 10d859bf-85f8-46a0-ad80-a9dcf0c578b5
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - paragraphs
+id: paragraph.field_facebook_icon
+field_name: field_facebook_icon
+entity_type: paragraph
+type: image
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: Facebook
+    title: ''
+    width: null
+    height: null
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
