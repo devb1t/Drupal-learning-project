@@ -8,7 +8,10 @@ dependencies:
     - field.field.user.user.field_username
     - field.field.user.user.field_website_url
     - field.field.user.user.user_picture
+    - views.view.advertisement_small
     - views.view.advertisement_wide
+    - views.view.latest_news_sitebar
+    - views.view.user_articles
     - views.view.user_social_media
     - views.view.users_page
   module:
@@ -80,7 +83,46 @@ third_party_settings:
           label: 'User Articles / Sidebar & AD'
           context_mapping: {  }
           column_widths: 75-25
-        components: {  }
+        components:
+          8451ac40-5b3e-4aa6-bebd-db669752d3a5:
+            uuid: 8451ac40-5b3e-4aa6-bebd-db669752d3a5
+            region: second
+            configuration:
+              id: 'views_block:latest_news_sitebar-block_1'
+              label: ''
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional: {  }
+          f8685b9c-0f6d-4306-b73d-2cb94e0bb782:
+            uuid: f8685b9c-0f6d-4306-b73d-2cb94e0bb782
+            region: first
+            configuration:
+              id: 'views_block:user_articles-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional: {  }
+          98c365dc-7f64-4550-88b6-a06f02321d9a:
+            uuid: 98c365dc-7f64-4550-88b6-a06f02321d9a
+            region: second
+            configuration:
+              id: 'views_block:advertisement_small-block_1'
+              label: '- Advertisement -'
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: '- Advertisement -'
+              items_per_page: none
+            weight: 1
+            additional: {  }
         third_party_settings: {  }
 _core:
   default_config_hash: mZLyuWM9CQx2ZJVqFGSbzgFnHzudVbHBYmdU256A5Wk
