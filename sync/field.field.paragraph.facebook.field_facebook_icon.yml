@@ -1,4 +1,4 @@
-uuid: 8395f4f4-fda8-414c-a987-139de556a393
+uuid: 21bb02f0-65cf-4a15-a020-94957efc400b
 langcode: en
 status: true
 dependencies:
@@ -25,14 +25,14 @@ settings:
   max_filesize: ''
   max_resolution: ''
   min_resolution: ''
-  alt_field: true
+  alt_field: false
   alt_field_required: true
   title_field: false
   title_field_required: false
   default_image:
-    uuid: ab276cbe-298f-4b4c-91d4-8f8897b6c2ed
-    alt: Facebook
+    uuid: aae3afc3-b1cd-4657-a615-7097931f941c
+    alt: ''
     title: ''
-    width: 1024
-    height: 1024
+    width: 416
+    height: 415
 field_type: image

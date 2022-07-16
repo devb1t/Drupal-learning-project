@@ -1,4 +1,4 @@
-uuid: f069d139-34f6-4b10-b6ab-2cacfd8f0519
+uuid: 95268020-3958-4505-916e-d41e56d62a22
 langcode: en
 status: true
 dependencies:
@@ -16,11 +16,11 @@ settings:
   display_default: false
   uri_scheme: public
   default_image:
-    uuid: ''
+    uuid: e1dfffa7-5982-424c-8e3a-f66375a38792
     alt: Instagram
     title: ''
-    width: null
-    height: null
+    width: 410
+    height: 410
 module: image
 locked: false
 cardinality: 1

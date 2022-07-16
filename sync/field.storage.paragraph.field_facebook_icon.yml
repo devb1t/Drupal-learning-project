@@ -1,4 +1,4 @@
-uuid: 10d859bf-85f8-46a0-ad80-a9dcf0c578b5
+uuid: 6847c7e5-fe9c-42c0-935b-023787f2e416
 langcode: en
 status: true
 dependencies:
@@ -16,11 +16,11 @@ settings:
   display_default: false
   uri_scheme: public
   default_image:
-    uuid: ''
+    uuid: 4769fe3f-8b95-4131-ae40-1b8933b97b6e
     alt: Facebook
-    title: ''
-    width: null
-    height: null
+    title: Facebook
+    width: 1024
+    height: 1024
 module: image
 locked: false
 cardinality: 1

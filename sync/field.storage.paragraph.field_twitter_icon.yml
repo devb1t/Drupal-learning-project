@@ -1,4 +1,4 @@
-uuid: 4788f02d-badb-46da-90ac-7f7bee43facc
+uuid: 46a0faa2-33df-445d-a3b9-46df7d6ec9e2
 langcode: en
 status: true
 dependencies:
@@ -16,11 +16,11 @@ settings:
   display_default: false
   uri_scheme: public
   default_image:
-    uuid: ''
-    alt: Twitter
+    uuid: 9ef56477-a3f8-4f53-a8be-61507e50b5af
+    alt: ''
     title: ''
-    width: null
-    height: null
+    width: 2076
+    height: 2077
 module: image
 locked: false
 cardinality: 1
