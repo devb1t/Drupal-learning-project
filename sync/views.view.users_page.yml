@@ -253,7 +253,7 @@ display:
         - 'config:field.storage.user.field_username'
   attachment_1:
     id: attachment_1
-    display_title: Attachment
+    display_title: 'User Social Media'
     display_plugin: attachment
     position: 2
     display_options:
@@ -749,6 +749,7 @@ display:
           plugin_id: standard
           required: false
       group_by: false
+      display_description: ''
       footer: {  }
       display_extenders: {  }
       displays:
