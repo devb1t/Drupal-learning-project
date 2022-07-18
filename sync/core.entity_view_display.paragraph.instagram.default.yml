@@ -1,0 +1,40 @@
+uuid: 187a0488-8f0f-49b8-86cc-b9e8d0fe2597
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.instagram.field_instagram_icon
+    - field.field.paragraph.instagram.field_instagram_link
+    - paragraphs.paragraphs_type.instagram
+  module:
+    - image
+    - link
+id: paragraph.instagram.default
+targetEntityType: paragraph
+bundle: instagram
+mode: default
+content:
+  field_instagram_icon:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_instagram_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

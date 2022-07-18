@@ -1,0 +1,47 @@
+uuid: b0adaad8-1c16-487f-a7bb-db24bcdad0ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_social_media_user_links
+    - paragraphs.paragraphs_type.facebook
+    - paragraphs.paragraphs_type.instagram
+    - paragraphs.paragraphs_type.twitter
+  module:
+    - entity_reference_revisions
+    - user
+id: user.user.field_social_media_user_links
+field_name: field_social_media_user_links
+entity_type: user
+bundle: user
+label: 'Social Media'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      facebook: facebook
+      instagram: instagram
+      twitter: twitter
+    negate: 0
+    target_bundles_drag_drop:
+      facebook:
+        weight: 4
+        enabled: true
+      image:
+        weight: 5
+        enabled: false
+      instagram:
+        weight: 8
+        enabled: true
+      text:
+        weight: 6
+        enabled: false
+      twitter:
+        weight: 10
+        enabled: true
+field_type: entity_reference_revisions

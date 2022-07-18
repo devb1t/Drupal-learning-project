@@ -1,0 +1,27 @@
+uuid: 6a41d80a-d555-40c3-bf0e-16ca14f1dd48
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.facebook.field_facebook_icon
+    - field.field.paragraph.facebook.field_facebook_link
+    - paragraphs.paragraphs_type.facebook
+  module:
+    - link
+id: paragraph.facebook.default
+targetEntityType: paragraph
+bundle: facebook
+mode: default
+content:
+  field_facebook_link:
+    type: link_default
+    weight: 0
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_facebook_icon: true
+  status: true

@@ -5,7 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.user.compact
     - field.field.user.user.field_description
-    - field.field.user.user.field_social_links
+    - field.field.user.user.field_social_media_user_links
     - field.field.user.user.field_username
     - field.field.user.user.field_website_url
     - field.field.user.user.user_picture
@@ -33,7 +33,7 @@ content:
     region: content
 hidden:
   field_description: true
-  field_social_links: true
+  field_social_media_user_links: true
   field_username: true
   field_website_url: true
   member_for: true
