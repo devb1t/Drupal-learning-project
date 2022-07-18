@@ -8,7 +8,12 @@ dependencies:
     - field.field.user.user.field_username
     - field.field.user.user.field_website_url
     - field.field.user.user.user_picture
-    - image.style.thumbnail
+    - views.view.advertisement_small
+    - views.view.advertisement_wide
+    - views.view.latest_news_sitebar
+    - views.view.user_articles
+    - views.view.user_social_media
+    - views.view.users_page
   module:
     - entity_reference_revisions
     - image
