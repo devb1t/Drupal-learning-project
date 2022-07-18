@@ -384,12 +384,7 @@ display:
       relationships: {  }
       link_display: page_1
       link_url: ''
-      header:
-        area:
-          id: area
-          table: views
-          field: area
-          plugin_id: text
+      header: {  }
       footer: {  }
       display_extenders: {  }
     cache_metadata:
@@ -756,6 +751,9 @@ display:
         options:
           offset: 0
           items_per_page: 1
+      cache:
+        type: none
+        options: {  }
       sorts: {  }
       arguments:
         tid:
@@ -807,6 +805,7 @@ display:
         groups:
           1: AND
       defaults:
+        cache: false
         fields: false
         sorts: false
         arguments: false
@@ -1497,6 +1496,9 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+      cache:
+        type: tag
+        options: {  }
       style:
         type: default
         options:
@@ -1515,9 +1517,14 @@ display:
         type: views_query
         options: {  }
       defaults:
+        cache: false
+        group_by: false
         style: false
         row: false
+        relationships: false
         fields: false
+      relationships: {  }
+      group_by: false
       display_extenders: {  }
       path: taxonomy/term/%
     cache_metadata:
