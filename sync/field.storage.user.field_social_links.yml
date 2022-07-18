@@ -1,4 +1,4 @@
-uuid: f01220ab-4dc3-43ba-9a1b-ff83708744b8
+uuid: 58305f42-037c-4e32-a0c2-e7d42818a81a
 langcode: en
 status: true
 dependencies:
@@ -6,8 +6,8 @@ dependencies:
     - entity_reference_revisions
     - paragraphs
     - user
-id: user.field_social_media_user_links
-field_name: field_social_media_user_links
+id: user.field_social_links
+field_name: field_social_links
 entity_type: user
 type: entity_reference_revisions
 settings:

@@ -1,20 +1,20 @@
-uuid: b0adaad8-1c16-487f-a7bb-db24bcdad0ec
+uuid: bb31c86b-99b9-4af0-91d9-75cceb448907
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.user.field_social_media_user_links
+    - field.storage.user.field_social_links
     - paragraphs.paragraphs_type.facebook
     - paragraphs.paragraphs_type.instagram
     - paragraphs.paragraphs_type.twitter
   module:
     - entity_reference_revisions
     - user
-id: user.user.field_social_media_user_links
-field_name: field_social_media_user_links
+id: user.user.field_social_links
+field_name: field_social_links
 entity_type: user
 bundle: user
-label: 'Social Media'
+label: 'Social Links'
 description: ''
 required: false
 translatable: false
@@ -30,18 +30,18 @@ settings:
     negate: 0
     target_bundles_drag_drop:
       facebook:
-        weight: 4
+        weight: 5
         enabled: true
       image:
-        weight: 5
+        weight: 6
         enabled: false
       instagram:
         weight: 8
         enabled: true
       text:
-        weight: 6
+        weight: 7
         enabled: false
       twitter:
-        weight: 10
+        weight: 8
         enabled: true
 field_type: entity_reference_revisions

@@ -1,4 +1,4 @@
-uuid: 5288fd6c-2ba0-44c5-bbc7-8a2f2c03ecfd
+uuid: 69e24440-7155-48df-9c46-5e588fc78756
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ id: paragraph.facebook.field_facebook_link
 field_name: field_facebook_link
 entity_type: paragraph
 bundle: facebook
-label: Facebook
+label: Link
 description: ''
 required: true
 translatable: false
