@@ -13,7 +13,7 @@ dependencies:
     - views.view.advertisement_wide
     - views.view.article_author_statistics
     - views.view.more_articles_sidebar
-    - views.view.new_podcast
+    - views.view.must_read_sidebar_articles_page
   module:
     - layout_builder
     - layout_discovery
@@ -162,17 +162,17 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 2
             additional: {  }
-          f0f0bce0-e6f2-4881-8e88-9cbb654e2b94:
-            uuid: f0f0bce0-e6f2-4881-8e88-9cbb654e2b94
+          a763b37d-fcf7-41fa-91bd-4a14d98886a2:
+            uuid: a763b37d-fcf7-41fa-91bd-4a14d98886a2
             region: first
             configuration:
-              id: 'views_block:new_podcast-block_1'
-              label: 'Must Read'
+              id: 'views_block:must_read_sidebar_articles_page-block_1'
+              label: ''
               label_display: visible
               provider: views
               context_mapping: {  }
-              views_label: 'Must Read'
-              items_per_page: '4'
+              views_label: ''
+              items_per_page: none
             weight: 0
             additional: {  }
         third_party_settings: {  }
