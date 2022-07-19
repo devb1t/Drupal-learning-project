@@ -1,4 +1,4 @@
-uuid: aaa39da6-dae4-422f-936c-3858c9b38f99
+uuid: 8a0843bf-187b-4c22-bcda-b372859024f6
 langcode: en
 status: true
 dependencies:
@@ -10,8 +10,8 @@ dependencies:
     - image
     - node
     - user
-id: more_articles_sidebar
-label: 'More Articles'
+id: must_read_sidebar_articles_page
+label: 'Must Read'
 module: views
 description: ''
 tag: ''
@@ -24,7 +24,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'More Articles'
+      title: 'Must Read'
       fields:
         title:
           id: title
@@ -226,7 +226,7 @@ display:
         type: some
         options:
           offset: 0
-          items_per_page: 5
+          items_per_page: 4
       exposed_form:
         type: basic
         options:
