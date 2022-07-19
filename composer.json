@@ -21,7 +21,13 @@
         "drupal/core-project-message": "^9.4",
         "drupal/core-recommended": "^9.4",
         "drupal/paragraphs": "^1.14",
-        "drush/drush": "^11.0"
+        "drush/drush": "^11.0",
+        "slevomat/coding-standard": "^7.0"
+    },
+    "scripts": {
+        "post-install-cmd": "@update-git-hooks",
+        "post-update-cmd": "@update-git-hooks",
+        "update-git-hooks": "[[ -f ./vendor/bin/cghooks ]] && ./vendor/bin/cghooks update ||:;"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -33,7 +39,8 @@
         "allow-plugins": {
             "composer/installers": true,
             "drupal/core-composer-scaffold": true,
-            "drupal/core-project-message": true
+            "drupal/core-project-message": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
         }
     },
     "extra": {
@@ -91,6 +98,15 @@
                 "  * Remove the plugin that prints this message:",
                 "      composer remove drupal/core-project-message"
             ]
+        },
+        "hooks": {
+            "pre-commit": "./utility/git-hooks/pre-commit.sh",
+            "commit-msg": "./utility/git-hooks/commit-msg.sh $1"
         }
+    },
+    "require-dev": {
+        "brainmaestro/composer-git-hooks": "^2.8",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.2",
+        "drupal/coder": "^8.3"
     }
 }
