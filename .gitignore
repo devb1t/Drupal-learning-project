@@ -27,7 +27,10 @@
 /.editorconfig
 /.gitattributes
 /.github/
-/.idea/
 
-# other
+# Ignore some files from custom themes
+/web/themes/custom/*/node_modules
+/web/themes/custom/*/dist
+
+# Other
 /*.sql
