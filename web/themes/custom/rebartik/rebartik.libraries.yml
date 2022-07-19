@@ -1,4 +1,4 @@
 styles:
   css:
-    component:
-      css/rebartik.css: {}
+    theme:
+      dist/style.css: {}
