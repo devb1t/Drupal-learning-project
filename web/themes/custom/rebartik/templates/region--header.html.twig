@@ -1,0 +1,27 @@
+{#
+/**
+ * @file
+ * Bartik's theme implementation to display a header region.
+ *
+ * Available variables:
+ * - content: The content for this region, typically blocks.
+ * - attributes: HTML attributes for the region div.
+ * - region: The name of the region variable as defined in the theme's
+ *   .info.yml file.
+ *
+ * @see template_preprocess_region()
+ */
+#}
+
+<div class="region-header">
+  {{ elements['rebartik_weather'] }}
+
+  {{ elements['rebartik_views_block__site_logo_block_1'] }}
+
+  <div class="social-media-n-search">
+    {{ elements['rebartik_views_block__social_media_block_1'] }}
+    {{ elements['rebartik_views_block__search_button_block_1'] }}
+  </div>
+</div>
+
+{% set attributes = attributes.addClass('clearfix') %}
