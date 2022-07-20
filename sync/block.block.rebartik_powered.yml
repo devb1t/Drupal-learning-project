@@ -1,0 +1,22 @@
+uuid: df279dc2-3d88-4075-9f2e-cd9e9c182e07
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - rebartik
+_core:
+  default_config_hash: I6Esh8cDlPdl2POZg4MOSRUrQNYA1UNCJCxL2yqT_wc
+id: rebartik_powered
+theme: rebartik
+region: footer_fifth
+weight: 10
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,26 @@
+uuid: 01a48024-d142-4b78-91a5-3246a40ae50a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - rebartik
+_core:
+  default_config_hash: ItFhhiUOoeR7oIq73ZaCV7PAYrOwXZ-9fazMzF5DJXM
+id: rebartik_page_title
+theme: rebartik
+region: content
+weight: -50
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "/user/*\r\n/taxonomy/term/*"

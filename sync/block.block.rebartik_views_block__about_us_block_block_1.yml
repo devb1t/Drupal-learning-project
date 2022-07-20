@@ -1,0 +1,24 @@
+uuid: a11a080a-2d7d-4150-bebd-a5a90d2af7f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.about_us_block
+  module:
+    - views
+  theme:
+    - rebartik
+id: rebartik_views_block__about_us_block_block_1
+theme: rebartik
+region: footer_second
+weight: 0
+provider: null
+plugin: 'views_block:about_us_block-block_1'
+settings:
+  id: 'views_block:about_us_block-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }

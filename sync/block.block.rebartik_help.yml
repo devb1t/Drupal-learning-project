@@ -1,0 +1,22 @@
+uuid: fc831eb1-bd67-48cf-88e1-f268644f9dd0
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - rebartik
+_core:
+  default_config_hash: '-laWx8WA-ikiIEH3NJQ0hVbjqk3iEuBms91LB0B4IQU'
+id: rebartik_help
+theme: rebartik
+region: content
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

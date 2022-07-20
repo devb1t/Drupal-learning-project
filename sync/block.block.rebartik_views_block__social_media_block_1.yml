@@ -1,0 +1,24 @@
+uuid: c0b8f891-46a8-4632-aa37-34046f183a80
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.social_media
+  module:
+    - views
+  theme:
+    - rebartik
+id: rebartik_views_block__social_media_block_1
+theme: rebartik
+region: header
+weight: -8
+provider: null
+plugin: 'views_block:social_media-block_1'
+settings:
+  id: 'views_block:social_media-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }

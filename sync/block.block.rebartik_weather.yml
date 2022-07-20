@@ -1,0 +1,25 @@
+uuid: 80805823-a94f-4d39-b6d4-e6045e2c6751
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:1abcbb86-184e-4eb2-9ece-cf50bced7b79'
+  module:
+    - block_content
+  theme:
+    - rebartik
+id: rebartik_weather
+theme: rebartik
+region: header
+weight: -10
+provider: null
+plugin: 'block_content:1abcbb86-184e-4eb2-9ece-cf50bced7b79'
+settings:
+  id: 'block_content:1abcbb86-184e-4eb2-9ece-cf50bced7b79'
+  label: Weather
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
