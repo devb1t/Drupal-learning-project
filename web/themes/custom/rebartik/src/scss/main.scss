@@ -3,3 +3,14 @@
  */
 @import 'global/header';
 @import 'global/footer';
+
+/*
+  Blocks
+ */
+@import 'blocks/arts';
+
+/*
+  Fix bartik styles
+   - Links underlines
+ */
+@import 'bartik_rewrites';
