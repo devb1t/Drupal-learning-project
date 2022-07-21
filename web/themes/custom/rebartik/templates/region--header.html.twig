@@ -13,7 +13,14 @@
  */
 #}
 
-<div class="region-header">
+{%
+  set classes = [
+  'region',
+  'region-' ~ region|clean_class,
+]
+%}
+
+<div{{ attributes.addClass(classes) }}>
   {{ elements['rebartik_weather'] }}
 
   {{ elements['rebartik_views_block__site_logo_block_1'] }}
