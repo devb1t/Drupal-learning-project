@@ -1,6 +1,10 @@
 @import '../_variables';
 @import '../_fonts';
 
+.site-footer .block {
+  border: none;
+}
+
 footer {
   position: relative;
 
@@ -32,8 +36,13 @@ footer {
   }
 
   .block {
+<<<<<<< HEAD
     border: none;
     margin: 0;
+=======
+    border: none!important;
+    margin: 0!important;
+>>>>>>> dccad5a (#5099 Start to theming 'Arts' block. @TODO Finish 'Arts' block)
   }
 
   .region-footer-second, .region-footer-third, .region-footer-fourth {
@@ -42,8 +51,8 @@ footer {
       font-weight: 900;
       font-size: 1.2rem;
       color: $F_yellow;
-      text-transform: none!important;
-      border-bottom: none!important;
+      text-transform: none;
+      border-bottom: none;
     }
   }
 
@@ -63,7 +72,7 @@ footer {
     }
 
     .block-views-blockfooter-social-media-block-1 {
-      margin: 0 !important;
+      margin: 0;
 
       .view-content {
         display: flex;
@@ -88,7 +97,7 @@ footer {
 
       &:hover {
         a, span {
-          color: $F_yellow!important;
+          color: $F_yellow;
         }
       }
     }
@@ -112,7 +121,7 @@ footer {
 
       &:hover {
         a, span {
-          color: $F_yellow!important;
+          color: $F_yellow;
         }
       }
     }
