@@ -2,6 +2,35 @@
 @import '../_fonts';
 
 footer {
+  position: relative;
+
+  &:before {
+    content: '';
+    background-image: url(https://api.time.com/wp-content/uploads/2014/05/vladstudio.jpg);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: 1;
+  }
+
+  .layout-container {
+    z-index: 2;
+    position: relative;
+  }
+
   .block {
     border: none!important;
     margin: 0!important;
