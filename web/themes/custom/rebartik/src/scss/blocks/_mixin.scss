@@ -1,18 +1,12 @@
-@mixin default($width: 200px, $border: true) {
+@mixin default($width: 200px) {
   padding: 25px;
-
-  @if $width {
-    width: $width;
-  }
-
-  @if $border {
-    border: 0.05rem solid rgba(100, 100, 100, 0.1);
-  }
+  border: 0.05rem solid rgba(100, 100, 100, 0.1);
+  width: $width;
 
   @media screen and (max-width: 600px) {
     width: auto;
-    margin: 10px 0;
-    padding: 20px 16px;
+    margin: 10px;
+    padding: 25px;
   }
 }
 
@@ -26,7 +20,7 @@
   }
 }
 
-@mixin other($color: $purple) {
+@mixin other {
   margin-bottom: 20px;
 
   &:last-child {
@@ -36,22 +30,18 @@
   &:hover {
     .views-field-title {
       a {
-        color: $color;
+        color: $purple;
       }
     }
   }
 }
 
-@mixin field_image($type, $circle: false, $margin-left: null) {
+@mixin field_image($type, $circle: false) {
   .views-field-field-image {
     @if $circle {
       img {
         border-radius: 1337px;
       }
-    }
-
-    @if $margin-left {
-      margin-left: $margin-left;
     }
 
     @media screen and (max-width: 600px) {
@@ -68,13 +58,13 @@
   }
 }
 
-@mixin field_title($color: $black) {
+@mixin field_title {
   .views-field-title {
     a {
       font-family: 'Gelasio', sans-serif;
       font-weight: 500;
       font-size: .85rem;
-      color: $color;
+      color: $black;
     }
   }
 }
@@ -89,17 +79,13 @@
   }
 }
 
-@mixin two_columns($grid: '60% 40%') {
+@mixin two_columns {
   display: grid;
-  grid-template-columns: $grid;
+  grid-template-columns: 60% 40%;
   grid-auto-flow: row dense;
 
   .views-field-created {
     grid-column: auto/span 2;
-  }
-
-  @media screen and (max-width: 600px) {
-    grid-template-columns: 70% 30%;
   }
 }
 
