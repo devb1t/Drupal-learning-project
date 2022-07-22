@@ -1,0 +1,22 @@
+uuid: 09b7f66e-9b0a-4c60-a491-f9552d6b2726
+langcode: en
+status: true
+dependencies:
+  theme:
+    - rebartik
+_core:
+  default_config_hash: Qf2BoIzd9py5AYXZj8fJzCYDyVk1-AWXcu-AqQeDZKA
+id: rebartik_local_tasks
+theme: rebartik
+region: content
+weight: -40
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

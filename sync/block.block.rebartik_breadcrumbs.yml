@@ -1,0 +1,22 @@
+uuid: f7218956-99b2-40df-b4e9-d238e84eff86
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - rebartik
+_core:
+  default_config_hash: y0bXRvKYQQKkf_RVxA3aOPGpIfKKsDOzzrWYCgjxJ9Y
+id: rebartik_breadcrumbs
+theme: rebartik
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

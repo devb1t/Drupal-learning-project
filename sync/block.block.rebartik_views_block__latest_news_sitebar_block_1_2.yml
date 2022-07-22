@@ -1,0 +1,29 @@
+uuid: 434dddb0-afd2-492a-baa1-4dcad0f86e43
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.latest_news_sitebar
+  module:
+    - system
+    - views
+  theme:
+    - rebartik
+id: rebartik_views_block__latest_news_sitebar_block_1_2
+theme: rebartik
+region: sidebar_second
+weight: -9
+provider: null
+plugin: 'views_block:latest_news_sitebar-block_1'
+settings:
+  id: 'views_block:latest_news_sitebar-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/arts\r\n/business\r\n/magazine\r\n/sport\r\n/culture\r\n/politics\r\n/style\r\n/travel\r\n/news"

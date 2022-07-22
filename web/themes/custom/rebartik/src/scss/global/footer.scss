@@ -1,0 +1,132 @@
+@import '../_variables';
+@import '../_fonts';
+
+.site-footer .block {
+  border: none;
+}
+
+footer {
+  position: relative;
+
+  &:before {
+    content: '';
+    background-image: url(https://api.time.com/wp-content/uploads/2014/05/vladstudio.jpg);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: 1;
+  }
+
+  .layout-container {
+    z-index: 2;
+    position: relative;
+  }
+
+  .block {
+    border: none;
+    margin: 0;
+  }
+
+  /*
+    Remove bartik links underline
+   */
+  a, a img {
+    text-decoration: none;
+    border: 0;
+  }
+
+  .region-footer-second, .region-footer-third, .region-footer-fourth {
+    h2 {
+      font-family: 'Source Sans Pro', sans-serif;
+      font-weight: 900;
+      font-size: 1.2rem;
+      color: $F_yellow;
+      text-transform: none;
+      border-bottom: none;
+    }
+  }
+
+  .region-footer-first {
+    .view-logo-copyright {
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: .7rem;
+      font-weight: 400;
+      color: $white;
+
+      p {
+        font-family: 'Gelasio', serif;
+        font-weight: 500;
+        font-size: 2rem;
+        margin: 5px 0;
+      }
+    }
+
+    .block-views-blockfooter-social-media-block-1 {
+      margin: 0;
+
+      .view-content {
+        display: flex;
+
+        .views-row {
+          margin: 0 8px;
+          width: 20px;
+        }
+      }
+    }
+  }
+
+  .region-footer-second {
+    .views-field {
+      margin: 3px 0;
+
+      a {
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: 400;
+        font-size: .7rem;
+      }
+
+      &:hover {
+        a, span {
+          color: $F_yellow;
+        }
+      }
+    }
+  }
+
+  .region-footer-third {
+    .views-row {
+      display: flex;
+      justify-content: space-between;
+
+      .views-field {
+        margin: 3px 0;
+
+        a, span {
+          font-family: 'Source Sans Pro', sans-serif;
+          font-weight: 400;
+          font-size: .7rem;
+          text-transform: uppercase;
+        }
+      }
+
+      &:hover {
+        a, span {
+          color: $F_yellow;
+        }
+      }
+    }
+  }
+}
