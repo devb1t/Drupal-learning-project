@@ -1,0 +1,19 @@
+@import '../_variables';
+@import '../_fonts';
+@import '_mixin';
+
+.block-views-blockbusiness-sidebar-block-1 {
+  margin: 30px 0 0 auto;
+
+  @include default(240px);
+  @include block_title;
+  @include button;
+
+  .views-row {
+    @include two_columns;
+    @include other;
+    @include field_image("small", $circle: true);
+    @include field_title;
+    @include field_created;
+  }
+}
