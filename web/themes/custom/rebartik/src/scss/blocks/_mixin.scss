@@ -89,9 +89,9 @@
   }
 }
 
-@mixin two_columns {
+@mixin two_columns($grid: '60% 40%') {
   display: grid;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: $grid;
   grid-auto-flow: row dense;
 
   .views-field-created {
