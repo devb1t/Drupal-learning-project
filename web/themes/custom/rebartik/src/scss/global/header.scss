@@ -12,12 +12,12 @@
 header {
   border-bottom: .1rem rgba(114, 114, 114, 0.31);
 
-  & .region-header {
+  .region-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    & #block-rebartik-weather {
+    #block-rebartik-weather {
       p {
         display: flex;
         align-items: center;
@@ -31,7 +31,7 @@ header {
       }
     }
 
-    & .block-views-blocksite-logo-block-1 {
+    .block-views-blocksite-logo-block-1 {
       color: $black;
 
       .view-id-site_logo {
@@ -56,10 +56,10 @@ header {
       }
     }
 
-    & .social-media-n-search {
+    .social-media-n-search {
       display: flex;
 
-      & .block-views-blocksocial-media-block-1 {
+      .block-views-blocksocial-media-block-1 {
         .view-content {
           display: flex;
 
@@ -83,7 +83,7 @@ header {
     }
   }
 
-  & .region-primary-menu {
+  .region-primary-menu {
     border-top: .07rem solid rgba(206, 206, 206, 0.53);
     margin-top: 20px;
 
