@@ -1,0 +1,16 @@
+@import '../_variables';
+@import '../_fonts';
+@import '_mixin';
+
+.block-views-blockeditor-picks-block-block-1 {
+  @include default(320px, false);
+  @include block_title;
+
+  .views-row {
+    @include two_columns;
+    @include other($F_yellow);
+    @include field_image("small", $margin-left: 20px);
+    @include field_title($white);
+    @include field_created;
+  }
+}

@@ -1,7 +1,13 @@
-@mixin default($width: 200px) {
+@mixin default($width: 200px, $border: true) {
   padding: 25px;
-  border: 0.05rem solid rgba(100, 100, 100, 0.1);
-  width: $width;
+
+  @if $width {
+    width: $width;
+  }
+
+  @if $border {
+    border: 0.05rem solid rgba(100, 100, 100, 0.1);
+  }
 
   @media screen and (max-width: 600px) {
     width: auto;
@@ -20,7 +26,7 @@
   }
 }
 
-@mixin other {
+@mixin other($color: $purple) {
   margin-bottom: 20px;
 
   &:last-child {
@@ -30,18 +36,22 @@
   &:hover {
     .views-field-title {
       a {
-        color: $purple;
+        color: $color;
       }
     }
   }
 }
 
-@mixin field_image($type, $circle: false) {
+@mixin field_image($type, $circle: false, $margin-left: null) {
   .views-field-field-image {
     @if $circle {
       img {
         border-radius: 1337px;
       }
+    }
+
+    @if $margin-left {
+      margin-left: $margin-left;
     }
 
     @media screen and (max-width: 600px) {
@@ -58,13 +68,13 @@
   }
 }
 
-@mixin field_title {
+@mixin field_title($color: $black) {
   .views-field-title {
     a {
       font-family: 'Gelasio', sans-serif;
       font-weight: 500;
       font-size: .85rem;
-      color: $black;
+      color: $color;
     }
   }
 }
@@ -86,6 +96,10 @@
 
   .views-field-created {
     grid-column: auto/span 2;
+  }
+
+  @media screen and (max-width: 600px) {
+    grid-template-columns: 70% 30%;
   }
 }
 
