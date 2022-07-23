@@ -1,6 +1,10 @@
 @import '../_variables';
 @import '../_fonts';
 
+.site-footer .block {
+  border: none;
+}
+
 footer {
   position: relative;
 
@@ -32,8 +36,8 @@ footer {
   }
 
   .block {
-    border: none!important;
-    margin: 0!important;
+    border: none;
+    margin: 0;
   }
 
   .region-footer-second, .region-footer-third, .region-footer-fourth {
@@ -42,9 +46,8 @@ footer {
       font-weight: 900;
       font-size: 1.2rem;
       color: $F_yellow;
-      text-transform: none!important;
-      border-bottom: none!important;
-      margin: 8px 0 20px 0;
+      text-transform: none;
+      border-bottom: none;
     }
   }
 
@@ -64,7 +67,7 @@ footer {
     }
 
     .block-views-blockfooter-social-media-block-1 {
-      margin: 0 !important;
+      margin: 0;
 
       .view-content {
         display: flex;
@@ -89,7 +92,7 @@ footer {
 
       &:hover {
         a, span {
-          color: $F_yellow!important;
+          color: $F_yellow;
         }
       }
     }
@@ -113,7 +116,7 @@ footer {
 
       &:hover {
         a, span {
-          color: $F_yellow!important;
+          color: $F_yellow;
         }
       }
     }
