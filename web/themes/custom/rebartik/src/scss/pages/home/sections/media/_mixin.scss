@@ -1,4 +1,4 @@
-@import '../../../_global';
+@import '../../../../_global';
 
 @mixin layout {
   @include bp-down('xs') {
