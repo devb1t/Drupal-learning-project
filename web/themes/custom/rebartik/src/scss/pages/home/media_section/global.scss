@@ -1,0 +1,10 @@
+@import '../../../_global';
+@import '_mixin';
+
+.node__content {
+  .layout--threecol-section--33-34-33 {
+    @include bp-up('xl') {
+      margin: 30px -100px 30px -100px;
+    }
+  }
+}

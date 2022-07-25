@@ -5,6 +5,10 @@
   @include layout;
   @include h2_title;
 
+  .content {
+    margin: 0;
+  }
+
   .desc {
     margin: 12px 0 0 0;
     font-family: 'Source Sans Pro', sans-serif;
