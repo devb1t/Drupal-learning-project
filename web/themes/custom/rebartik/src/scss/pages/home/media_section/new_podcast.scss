@@ -1,0 +1,61 @@
+@import '../../../_global';
+@import '_mixin';
+
+.block-views-blocknew-podcast-block-1 {
+  @include layout;
+  @include h2_title;
+
+  /*
+    Make two columns of content
+   */
+  .views-row {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-auto-flow: row dense;
+
+    .views-field-created {
+      grid-column: auto/span 2;
+    }
+  }
+
+  .views-field-title {
+    order: 1;
+
+    a {
+      font-family: 'Gelasio', sans-serif;
+      font-weight: 500;
+      font-size: 1.1rem;
+      color: $black;
+      border-bottom: None;
+    }
+  }
+
+  .views-field-nothing {
+    order: 3;
+    font-style: oblique;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: .75rem;
+
+    a {
+      border-bottom: None;
+      color: $black;
+    }
+  }
+
+  .views-field-field-image {
+    order: 2;
+
+    .field-content {
+      a {
+        display: block;
+        border-bottom: None;
+
+        img {
+          display: block;
+          margin-left: auto;
+          border-radius: 1337px;
+        }
+      }
+    }
+  }
+}
