@@ -1,10 +1,8 @@
-@import '../../_global';
+@import '_variables';
+@import '_fonts';
+@import '_responsive';
 
 @mixin layout {
-  @include bp-down('xs') {
-
-  }
-
   @include bp-up('xs') {
     .view-home-page-head-block {
       display: flex;
