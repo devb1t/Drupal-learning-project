@@ -1,0 +1,32 @@
+@import '../../../_global';
+@import '_mixin_politics_style';
+
+.view-style-content-block {
+  @include layout;
+  @include section_title;
+
+  @include content_info;
+
+  .attachment-after {
+    padding: 0;
+  }
+}
+
+.first-content.view-style-content-block {
+  @include columns(1);
+
+  @include content_image;
+  @include body(true);
+  @include content_title(1.2rem, false);
+}
+
+.second-content.view-style-content-block {
+  @include columns(2);
+
+  @include body(false);
+  @include content_title(.85rem);
+
+  @include bp-down('xs') {
+    @include content_image('small');
+  }
+}
