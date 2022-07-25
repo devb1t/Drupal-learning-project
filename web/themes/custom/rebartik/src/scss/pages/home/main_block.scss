@@ -1,0 +1,36 @@
+@import '../../_global';
+@import '_mixin';
+
+@include layout;
+
+.view-home-page-head-block {
+  .view-content {
+    @include tags;
+    @include content_data;
+    @include image;
+    @include body;
+
+    /*
+    Override default default bartik theme styles
+   */
+    a {
+      border-bottom: none;
+      color: $black;
+    }
+
+    .views-row {
+      margin-bottom: 36px;
+    }
+  }
+}
+
+/*
+  Solution for avoid troubles with similar class names in this view
+ */
+.first-content.view-home-page-head-block .view-content .views-row {
+  @include title;
+}
+
+.second-content.view-home-page-head-block .view-content .views-row {
+  @include title(1rem, $is_attachment: true);
+}

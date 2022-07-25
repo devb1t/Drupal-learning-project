@@ -4,10 +4,17 @@
 .block-views-blockpolitics-content-block-block-1 {
   @include layout;
   @include section_title;
-  @include two_columns;
 
-  @include content_image;
-  @include content_title;
   @include content_info;
-  @include body;
+  @include columns(2);
+
+  @include body(true);
+  @include content_title(.85rem);
+
+  @include bp-down('xs') {
+    @include content_image('small');
+  }
+  @include bp-up('xs') {
+    @include content_image();
+  }
 }
