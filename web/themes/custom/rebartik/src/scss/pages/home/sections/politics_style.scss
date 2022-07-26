@@ -1,0 +1,80 @@
+@import '../../../_global';
+
+/*
+           Politics section
+ */
+
+.block-views-blockpolitics-content-block-block-1 {
+  @include block_margins;
+  @include PS_title;
+  @include field_info;
+  @include layout_columns(2);
+  @include field_body;
+
+  @include field_title(.85rem, .85rem) {
+    @include bp-down('xs') {
+      padding-top: 6px;
+    }
+    @include bp-up('xs') {
+      padding-top: 12px;
+    }
+  }
+
+  @include bp-down('xs') {
+    @include field_image('small');
+  }
+  @include bp-up('xs') {
+    @include field_image();
+  }
+}
+
+/*
+            Style section
+ */
+
+.view-style-content-block {
+  @include block_margins;
+  @include PS_title;
+
+  @include field_info;
+
+  .attachment-after {
+    padding: 0;
+  }
+}
+
+.first-content > .view-content {
+  @include layout_columns(1);
+  @include field_image;
+  @include field_body;
+
+  @include field_title(1.2rem, 1.2rem) {
+    @include bp-down('xs') {
+      padding-top: 6px;
+    }
+    @include bp-up('xs') {
+      padding-top: 12px;
+    }
+
+    border-top: .15rem solid rgba(200, 200, 200, .35);
+  }
+}
+
+.second-content.view-style-content-block {
+  @include layout_columns(2);
+  @include field_body(false);
+  @include bartik_reset_a;
+
+  @include field_title(.85rem, .85rem) {
+    @include bp-down('xs') {
+      padding-top: 6px;
+    }
+    @include bp-up('xs') {
+      padding-top: 12px;
+    }
+  }
+
+  @include bp-down('xs') {
+    @include field_image('small');
+  }
+}
