@@ -1,0 +1,33 @@
+@import '../../../../_global';
+
+@mixin layout {
+  @include bp-down('xs') {
+    margin-left: -15px;
+    margin-top: 20px;
+    width: calc(100% + 30px);
+  }
+
+  @include bp-up('xs') {
+    margin-right: 20px;
+  }
+
+  //@include bp-up('xl') {
+  //  margin-left: -100px;
+  //}
+
+  padding: 15px;
+  box-sizing: border-box;
+  background: rgba(206,206,206,0.3);
+}
+
+@mixin h2_title {
+  h2, .view-subscribe-to-our-newsletter-homepage .title {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 900;
+    font-size: 1.2rem;
+    color: $purple;
+    text-transform: none;
+    border-bottom: none;
+    margin: 0;
+  }
+}

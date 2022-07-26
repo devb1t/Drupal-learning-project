@@ -1,0 +1,24 @@
+@import '../../../../_global';
+@import '_mixin';
+
+.block-views-blockstay-connected-homepage-block-1 {
+  @include layout;
+  @include h2_title;
+
+  margin-right: 0;
+
+  .view-content {
+    display: flex;
+    justify-content: space-between;
+
+    .views-row {
+      flex: 0 1 32%;
+    }
+  }
+
+  .views-field-field-social-media-image {
+    a {
+      border: None;
+    }
+  }
+}

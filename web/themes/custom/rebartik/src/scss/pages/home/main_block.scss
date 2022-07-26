@@ -26,10 +26,10 @@
 /*
   Solution for avoid troubles with similar class names in this view
  */
-.first-content .view-content .views-row {
+.first-content.view-home-page-head-block .view-content .views-row {
   @include title;
 }
 
-.second-content .view-content .views-row {
+.second-content.view-home-page-head-block .view-content .views-row {
   @include title(1rem, $is_attachment: true);
 }

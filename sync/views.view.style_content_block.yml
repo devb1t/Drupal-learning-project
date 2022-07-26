@@ -908,10 +908,12 @@ display:
       pager:
         type: some
         options:
-          offset: 0
+          offset: 1
           items_per_page: 3
       defaults:
+        css_class: false
         fields: false
+      css_class: second_content
       display_extenders: {  }
       displays:
         block_1: block_1
@@ -1313,8 +1315,25 @@ display:
           offset: 0
           items_per_page: 1
       defaults:
+        css_class: false
         pager: false
         fields: false
+        header: false
+      css_class: first_content
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: false
+          content:
+            value: '<p class="title">Style</p>'
+            format: basic_html
+          tokenize: false
       display_extenders: {  }
     cache_metadata:
       max-age: -1
