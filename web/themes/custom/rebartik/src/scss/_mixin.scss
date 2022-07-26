@@ -131,3 +131,72 @@
     }
   }
 }
+
+@mixin reset {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin bartik_reset_a {
+  a, a.link, a img, .views-field-field-image {
+    border: None;
+  }
+}
+
+@mixin link_hover($class) {
+  /*
+    $class - CSS class argument.
+   */
+
+  .views-row:hover {
+    #{$class} {
+      a {
+        color: $purple;
+      }
+    }
+  }
+}
+
+/*
+          Content fields mixins
+ */
+
+@mixin field_title($mobile_font_size, $desktop_font_size) {
+  .views-field-title {
+    font-family: 'Gelasio', serif;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-top: 6px;
+
+    a {
+      color: $black;
+    }
+
+    @include bartik_reset_a;
+
+    @include bp-down('xs') {
+      font-size: $mobile_font_size;
+    }
+
+    @include bp-up('xs') {
+      font-size: $desktop_font_size;
+    }
+  }
+}
+
+@mixin field_info {
+  .views-field-nothing {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: .8rem;
+    font-style: italic;
+    margin-top: 8px;
+
+    a {
+      color: $black;
+    }
+  }
+}
+
+/*
+          End of content fields mixins
+ */
