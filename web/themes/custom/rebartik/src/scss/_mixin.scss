@@ -131,7 +131,7 @@
   }
 }
 
-@mixin field_title($mobile_font_size, $desktop_font_size) {
+@mixin field_title($mobile_font_size, $desktop_font_size, $border: false) {
   .views-field-title {
     @include bartik_reset_a;
 
@@ -151,6 +151,12 @@
     @include bp-up('xs') {
       font-size: $desktop_font_size;
     }
+
+    @if $border {
+      border-top: .15rem solid rgba(200, 200, 200, .35);
+      margin-top: 0;
+      padding-top: 8px;
+    }
   }
 
   @content
@@ -159,9 +165,10 @@
 @mixin field_body($display: true) {
   @if $display {
     .views-field-body {
+
       margin-top: 10px;
 
-      strong {
+      strong, p strong {
         font-family: 'Source Sans Pro', sans-serif;
         font-size: .75rem;
         font-weight: 400;
@@ -186,6 +193,21 @@
 
     a {
       color: $black;
+    }
+  }
+}
+
+@mixin field_tags {
+  .views-field-field-tags {
+    margin: 5px 0;
+
+    a {
+      font-family: 'Source Sans Pro', sans-serif;
+      font-weight: 400;
+      font-size: .65rem;
+      color: $white;
+      padding: .12rem .2rem;
+      background: $purple;
     }
   }
 }

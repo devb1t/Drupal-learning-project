@@ -1,35 +1,62 @@
 @import '../../_global';
 
-@include layout;
-
-.view-home-page-head-block {
+.block-views-blockhome-page-head-block-block-1 {
   .view-content {
-    @include tags;
-    @include content_data;
-    @include image;
-    @include body;
+    @include field_tags;
+    @include field_info;
+    @include field_image;
+    @include field_body;
 
-    /*
-    Override default default bartik theme styles
-   */
-    a {
-      border-bottom: none;
-      color: $black;
-    }
+    @include bartik_reset_a;
 
     .views-row {
       margin-bottom: 36px;
     }
+
+    .views-field-body {
+      font-size: .85rem;
+    }
+
+    .views-field-nothing {
+      font-size: .7rem;
+      margin: 3px 0 8px 0;
+    }
+
+    .views-field-field-tags {
+      margin: 0;
+    }
   }
-}
 
-/*
-  Solution for avoid troubles with similar class names in this view
- */
-.first-content.view-home-page-head-block .view-content .views-row {
-  @include title;
-}
+  .first-content {
+    > .view-content {
+      @include field_title(1.2rem, .9rem);
+    }
 
-.second-content.view-home-page-head-block .view-content .views-row {
-  @include title(1rem, $is_attachment: true);
+    > .attachment-after {
+      @include field_title(1rem, 1rem);
+    }
+  }
+
+  /*
+    Layout styles
+   */
+  .first-content {
+    @include bp-up('xs') {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+    }
+
+    > .view-content {
+      @include bp-up('xs') {
+        flex: 0 1 67%;
+      }
+    }
+
+    > .attachment-after {
+      @include bp-up('xs') {
+        flex: 0 1 30%;
+      }
+    }
+  }
 }

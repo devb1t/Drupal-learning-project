@@ -7,8 +7,9 @@
 /*
   Home page
  */
-//@import 'pages/home/main_block';
-
+@import 'pages/home/main_block';
+@import 'pages/home/sections/must_read';
+@import 'pages/home/sections/politics_style';
 
 /*
   Home page Media section
@@ -16,8 +17,3 @@
 @import 'pages/home/sections/media/new_podcast';
 @import 'pages/home/sections/media/subscribe';
 @import 'pages/home/sections/media/stay_connected';
-
-/*
-  Home page other sections
- */
-@import 'pages/home/sections/politics_style';
