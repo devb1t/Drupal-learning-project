@@ -1,0 +1,131 @@
+@import '../../../_global';
+
+/*
+  Change layout
+ */
+.must-read-block {
+  display: flex;
+  flex-wrap: wrap;
+
+  > .attachment-before {
+    flex: 0 1 100%;
+  }
+
+  > .attachment-after {
+    box-sizing: border-box;
+  }
+
+  @include bp-down('xs') {
+    > .view-content, .attachment-after {
+      flex: 0 1 100%;
+    }
+  }
+
+  @include bp_up('xs') {
+    > .view-content {
+      flex: 0 1 40%;
+    }
+
+    > .attachment-after {
+      flex: 0 1 60%;
+    }
+  }
+}
+
+.block-views-blockmust-read-home-page-block-1 {
+  position: relative;
+  margin-top: 64px;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  &:after {
+    position: absolute;
+    content: '';
+    background: $purple;
+    z-index: 1;
+
+    @include bp-down('xs') {
+      left: -15px;
+      top: -42px;
+      width: calc(100% + 30px);
+      height: 240px;
+    }
+
+    @include bp-up('xs') {
+      left: -100px;
+      top: -50px;
+      width: calc(100% + 200px);
+      height: 256px;
+    }
+  }
+
+  .content {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.must-read-header {
+  p {
+    @include reset;
+
+    color: $white;
+  }
+
+  p.title {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 900;
+
+    @include bp-down('xs') {
+      font-size: 2.4rem;
+    }
+
+    @include bp-up('xs') {
+      font-size: 4rem;
+    }
+  }
+
+  p.desc {
+    font-family: 'Gelasio', serif;
+    margin-bottom: 20px;
+
+    @include bp-down('xs') {
+      font-size: .96rem;
+    }
+
+    @include bp-up('xs') {
+      font-size: 1.05rem;
+    }
+  }
+}
+
+.must-read-block > .view-content {
+  @include link_hover('.views-field-title');
+  @include bartik_reset_a;
+  @include field_title(1.1rem, 1.8rem);
+  @include field_info;
+}
+
+.must-read-attachment > .view-content {
+  @include link_hover('.views-field-title');
+  @include bartik_reset_a;
+  @include field_title(.8rem, 1.05rem);
+  @include field_info;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .views-row {
+    flex: 0 1 48%;
+  }
+
+  @include bp-down('xs') {
+    margin-top: 30px;
+  }
+
+  @include bp-up('xs') {
+    margin-top: 70px;
+  }
+}
