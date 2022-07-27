@@ -1,7 +1,8 @@
-@import '../_variables';
-@import '../_fonts';
+@import '../_global';
 
 footer {
+  @include bartik_reset_a;
+
   position: relative;
 
   &:before {
@@ -36,6 +37,14 @@ footer {
     margin: 0;
   }
 
+  .region-footer-first, .region-footer-second, .region-footer-third, .region-footer-fourth {
+    margin-top: 0;
+  }
+
+  .region-footer-second, .region-footer-third {
+
+  }
+
   .region-footer-second, .region-footer-third, .region-footer-fourth {
     h2 {
       font-family: 'Source Sans Pro', sans-serif;
@@ -44,6 +53,7 @@ footer {
       color: $F_yellow;
       text-transform: none!important;
       border-bottom: none!important;
+      margin-top: 0;
     }
   }
 
@@ -114,6 +124,24 @@ footer {
         a, span {
           color: $F_yellow!important;
         }
+      }
+    }
+  }
+
+  .region > .views-element-container {
+    border: None;
+  }
+
+  @include bp-up('xs') {
+    .site-footer__top {
+      display: flex;
+
+      .region-footer-second {
+        margin-left: auto;
+      }
+
+      .region-footer-second, .region-footer-third {
+        width: 16.5%;
       }
     }
   }
