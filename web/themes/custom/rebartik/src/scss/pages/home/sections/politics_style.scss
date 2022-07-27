@@ -15,6 +15,12 @@
   @include link_hover('.views-field-title');
 
   @include field_title(.85rem, .85rem) {
+    .views-field-title {
+      border-top: .05rem solid rgba(200, 200, 200, .35);
+      margin-top: 0;
+      padding-top: 8px;
+    }
+
     @include bp-down('xs') {
       padding-top: 6px;
     }
@@ -52,6 +58,8 @@
   @include field_image;
   @include field_body;
 
+  @include bartik_reset_a;
+
   @include field_title(1.2rem, 1rem) {
     @include bp-down('xs') {
       padding-top: 6px;
@@ -59,6 +67,10 @@
     @include bp-up('xs') {
       padding-top: 12px;
     }
+  }
+
+  .views-row {
+    margin-bottom: 16px;
   }
 }
 

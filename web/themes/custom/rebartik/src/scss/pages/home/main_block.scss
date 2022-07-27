@@ -30,11 +30,11 @@
 
   .first-content {
     > .view-content {
-      @include field_title(1.2rem, .9rem);
+      @include field_title(1.2rem, 1.6rem);
     }
 
     > .attachment-after {
-      @include field_title(1rem, 1rem);
+      @include field_title(.9rem, .85rem);
     }
   }
 

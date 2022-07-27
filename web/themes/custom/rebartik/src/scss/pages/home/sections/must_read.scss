@@ -110,7 +110,7 @@
 .must-read-attachment > .view-content {
   @include link_hover('.views-field-title');
   @include bartik_reset_a;
-  @include field_title(.8rem, 1.05rem);
+  @include field_title(.72rem, 1.05rem);
   @include field_info;
 
   display: flex;
@@ -119,6 +119,7 @@
 
   .views-row {
     flex: 0 1 48%;
+    margin-bottom: 16px;
   }
 
   @include bp-down('xs') {
