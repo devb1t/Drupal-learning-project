@@ -2,3 +2,5 @@ styles:
   css:
     theme:
       dist/style.css: {}
+  js:
+    dist/javascript.js: {}
