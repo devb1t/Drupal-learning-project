@@ -12,18 +12,14 @@ module.exports = {
   module: {
     rules: [
       {
-        test:/\.(s*)css$/,
-        use: [
-          MiniCss.loader,
-          "css-loader",
-          "sass-loader"
-        ]
+        test: /\.(s*)css$/,
+        use: [MiniCss.loader, "css-loader", "sass-loader"]
       }
     ]
   },
   plugins: [
-  new MiniCss({
-    filename: "style.css"
-  })
+    new MiniCss({
+      filename: "style.css"
+    })
   ]
 };
