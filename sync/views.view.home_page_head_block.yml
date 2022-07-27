@@ -581,7 +581,7 @@ display:
         - 'config:field.storage.node.field_tags'
   attachment_1:
     id: attachment_1
-    display_title: Attachment
+    display_title: 'second content'
     display_plugin: attachment
     position: 2
     display_options:
@@ -962,9 +962,12 @@ display:
         groups:
           1: AND
       defaults:
+        css_class: false
         fields: false
         filters: false
         filter_groups: false
+      css_class: second_content
+      display_description: ''
       display_extenders: {  }
       displays:
         block_1: block_1
@@ -1422,7 +1425,9 @@ display:
           separator: ', '
           field_api_classes: false
       defaults:
+        css_class: false
         fields: false
+      css_class: first_content
       display_extenders: {  }
     cache_metadata:
       max-age: -1

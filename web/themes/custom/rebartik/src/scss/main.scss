@@ -1,11 +1,31 @@
 /*
   Global elements
  */
-@import 'global/header';
-@import 'global/footer';
+@import 'global_elements/header';
+@import 'global_elements/footer';
 
 /*
-  Pages
+  Home page
  */
 @import 'pages/home/main_block';
 @import 'pages/home/sections/must_read';
+@import 'pages/home/sections/politics_style';
+
+/*
+  Home page Media section
+ */
+@import 'pages/home/sections/media/new_podcast';
+@import 'pages/home/sections/media/subscribe';
+@import 'pages/home/sections/media/stay_connected';
+
+/*
+  Blocks
+ */
+@import 'blocks/arts';
+@import 'blocks/travel';
+@import 'blocks/news';
+@import 'blocks/culture';
+@import 'blocks/sport';
+@import 'blocks/magazine';
+@import 'blocks/business';
+@import 'blocks/editor_picks';

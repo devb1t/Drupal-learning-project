@@ -1,0 +1,32 @@
+@import '../_global';
+
+.block-views-blockmagazine-sidebar-block-1 {
+  margin: 30px auto 0 0;
+
+  @include blocks_default_styles(240px, true);
+  @include link_hover('.views-field-title');
+
+  @include blocks_title;
+  @include field_title(.8rem, .7rem);
+  @include field_info('.views-field-created', .7rem);
+  @include blocks_button;
+
+  .views-row {
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: .05rem solid rgba(180, 180, 180, .25);
+
+    &:last-child {
+      margin-bottom: 0;
+      border: None;
+    }
+  }
+
+  .views-field-created {
+    margin-top: 4px;
+  }
+
+  .view-footer {
+    justify-content: center;
+  }
+}

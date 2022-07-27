@@ -1,0 +1,63 @@
+@import '../../_global';
+
+.block-views-blockhome-page-head-block-block-1 {
+  .view-content {
+    @include field_tags;
+    @include field_info;
+    @include field_image;
+    @include field_body;
+
+    @include bartik_reset_a;
+    @include link_hover('.views-field-title');
+
+    .views-row {
+      margin-bottom: 36px;
+    }
+
+    .views-field-body {
+      font-size: .85rem;
+    }
+
+    .views-field-nothing {
+      font-size: .7rem;
+      margin: 3px 0 8px 0;
+    }
+
+    .views-field-field-tags {
+      margin: 0;
+    }
+  }
+
+  .first-content {
+    > .view-content {
+      @include field_title(1.2rem, 1.6rem);
+    }
+
+    > .attachment-after {
+      @include field_title(.9rem, .85rem);
+    }
+  }
+
+  /*
+    Layout styles
+   */
+  .first-content {
+    @include bp-up('xs') {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+    }
+
+    > .view-content {
+      @include bp-up('xs') {
+        flex: 0 1 67%;
+      }
+    }
+
+    > .attachment-after {
+      @include bp-up('xs') {
+        flex: 0 1 30%;
+      }
+    }
+  }
+}

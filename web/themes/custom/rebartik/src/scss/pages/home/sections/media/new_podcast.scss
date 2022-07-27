@@ -1,0 +1,68 @@
+@import '../../../../_global';
+
+.node__content {
+  .layout--threecol-section--33-34-33 {
+    @include bp-up('xl') {
+      margin: 30px -100px 30px -100px;
+    }
+  }
+}
+
+.block-views-blocknew-podcast-block-1 {
+  @include flex_layout;
+  @include media_title;
+
+  /*
+    Make two columns of content
+   */
+  .views-row {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-auto-flow: row dense;
+
+    .views-field-created {
+      grid-column: auto/span 2;
+    }
+  }
+
+  .views-field-title {
+    order: 1;
+
+    a {
+      font-family: 'Gelasio', sans-serif;
+      font-weight: 900;
+      font-size: .8rem;
+      color: $black;
+      border-bottom: None;
+    }
+  }
+
+  .views-field-nothing {
+    order: 3;
+    font-style: oblique;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: .7rem;
+
+    a {
+      border-bottom: None;
+      color: $black;
+    }
+  }
+
+  .views-field-field-image {
+    order: 2;
+
+    .field-content {
+      a {
+        display: block;
+        border-bottom: None;
+
+        img {
+          display: block;
+          margin-left: auto;
+          border-radius: 1337px;
+        }
+      }
+    }
+  }
+}

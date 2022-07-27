@@ -501,7 +501,20 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
-      header: {  }
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: false
+          content:
+            value: '<p class="title">Politics</p>'
+            format: basic_html
+          tokenize: false
       footer: {  }
       display_extenders: {  }
     cache_metadata:

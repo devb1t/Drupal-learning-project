@@ -1,0 +1,116 @@
+@import '../_global';
+
+.layout__region > .block-views-blockeditor-picks-block-block-1 {
+  @include blocks_default_styles(280px, false);
+  @include link_hover('.views-field-title');
+
+  @include blocks_title;
+  @include field_title(.8rem, .7rem);
+  @include field_info('.views-field-created', .7rem);
+  @include field_image(None, 'circle');
+  @include blocks_button;
+
+  @include blocks_layout;
+
+  @include bp-down('xs') {
+    padding: 25px 0;
+
+    .views-field-field-image {
+      a {
+        display: block;
+
+        img {
+          display: block;
+          margin-left: auto;
+          width: 66px;
+        }
+      }
+    }
+  }
+
+  @include bp-up('xs') {
+    margin: 0 0 0 auto;
+    box-sizing: border-box;
+    padding: 0;
+  }
+
+  .views-row {
+    margin-bottom: 12px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .view-content > .views-row {
+    .views-field-title, .views-field-created {
+      flex: 0 1 70%;
+    }
+
+    .views-field-field-image {
+      flex: 0 1 25%;
+    }
+  }
+}
+
+.block-views-blockeditor-picks-block-block-1 {
+  @include blocks_default_styles(320px, false);
+  @include link_hover('.views-field-title');
+
+  @include blocks_title;
+  @include field_title(.8rem, .7rem);
+  @include field_info('.views-field-created', .7rem);
+  @include field_image;
+  @include blocks_button;
+
+  @include blocks_layout;
+
+  .views-row {
+    margin-bottom: 12px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .views-field-title {
+    a {
+      color: $white;
+    }
+  }
+
+  .views-row {
+    &:hover {
+      .views-field-title {
+        a {
+          color: $F_yellow;
+        }
+      }
+    }
+  }
+
+  @include bp-down('xs') {
+    padding: 25px 0;
+
+    .view-content > .views-row {
+      .views-field-title, .views-field-created {
+        flex: 0 1 75%;
+      }
+
+      .views-field-field-image {
+        flex: 0 1 20%;
+      }
+    }
+
+    .views-field-field-image {
+      a {
+        display: block;
+
+        img {
+          display: block;
+          margin-left: auto;
+        }
+      }
+    }
+  }
+}
