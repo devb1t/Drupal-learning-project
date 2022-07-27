@@ -1,52 +1,57 @@
-@import '../_variables';
-@import '../_fonts';
+@import '../_global';
 
 .block-views-blockarts-block-1 {
-  margin: 0 10px 0 0;
-  padding: 25px;
-  border: .05rem solid rgba(100, 100, 100, .1);
+  @include blocks_default_styles(260px);
+  @include link_hover('.views-field-title');
 
-  h2 {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 1.15rem;
-    font-weight: 900;
-    color: $purple;
-    margin: 0 0 20px 0;
-  }
+  @include blocks_title;
+  @include field_title(.75rem, .7rem);
+  @include field_info('.views-field-created', .7rem);
+  @include field_image(None);
 
   .views-row {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 
     &:last-child {
       margin-bottom: 0;
     }
+  }
 
-    &:hover {
-      .views-field-title {
-        a {
-          color: $purple;
+  @include bp-down('xs') {
+    .views-field-field-image {
+      margin-bottom: 8px;
+
+      a {
+        display: block;
+
+        img {
+          display: block;
+          margin-left: auto;
+          width: 100%;
         }
       }
     }
 
-    .views-field-field-image {
-
-    }
-
-    .views-field-title {
-      a {
-        font-family: 'Gelasio', sans-serif;
-        font-weight: 500;
-        font-size: .85rem;
-        color: $black;
-      }
-    }
-
     .views-field-created {
-      span {
-        font-style: oblique;
-        font-family: 'Source Sans Pro', sans-serif;
-        font-size: .75rem;
+      margin-top: 4px;
+      font-size: .65rem;
+    }
+  }
+
+  @include bp-up('xs') {
+    margin: 0 30px 0 auto;
+    box-sizing: border-box;
+    padding: 25px;
+
+    .views-field-field-image {
+      a {
+        display: block;
+
+        img {
+          display: block;
+          margin-left: auto;
+          width: 100%;
+        }
       }
     }
   }

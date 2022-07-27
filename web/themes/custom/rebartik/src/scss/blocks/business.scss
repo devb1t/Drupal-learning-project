@@ -1,19 +1,55 @@
-@import '../_variables';
-@import '../_fonts';
-@import '_mixin';
+@import '../_global';
 
 .block-views-blockbusiness-sidebar-block-1 {
   margin: 30px 0 0 auto;
 
-  @include default(240px);
-  @include block_title;
-  @include button;
+  @include blocks_default_styles(280px, false);
+  @include link_hover('.views-field-title');
+
+  @include blocks_title;
+  @include field_title(.8rem, .7rem);
+  @include field_info('.views-field-created', .7rem);
+  @include field_image(None, 'circle');
+
+  @include blocks_layout;
 
   .views-row {
-    @include two_columns;
-    @include other;
-    @include field_image("small", $circle: true);
-    @include field_title;
-    @include field_created;
+    margin-bottom: 12px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .view-content > .views-row {
+    .views-field-title, .views-field-created {
+      flex: 0 1 70%;
+    }
+
+    .views-field-field-image {
+      flex: 0 1 25%;
+    }
+  }
+
+  @include bp-down('xs') {
+    padding: 25px 0;
+
+    .views-field-field-image {
+      a {
+        display: block;
+
+        img {
+          display: block;
+          margin-left: auto;
+          width: 66px;
+        }
+      }
+    }
+  }
+
+  @include bp-up('xs') {
+    margin: 0 0 0 auto;
+    box-sizing: border-box;
+    padding: 25px 0;
   }
 }

@@ -97,6 +97,34 @@
   background: #F2F2F2;
 }
 
+/* Mixin specially for unique blocks */
+@mixin blocks_layout {
+  .view-content > .views-row {
+    display: flex;
+    flex-wrap: wrap;
+
+    .views-field-title, .views-field-created, .views-field-field-image {
+      margin-top: 0;
+    }
+
+    .views-field-title {
+      flex: 0 1 65%;
+      order: 1;
+    }
+
+    .views-field-created {
+      flex: 0 1 65%;
+      order: 3;
+    }
+
+    .views-field-field-image {
+      flex: 0 1 30%;
+      order: 2;
+      margin-left: 5%;
+    }
+  }
+}
+
 /*
           End of Layout
  */
@@ -117,15 +145,21 @@
   }
 }
 
-@mixin field_image($style: None) {
+@mixin field_image($size: None, $style: None) {
   .views-field-field-image {
     @include bartik_reset_a;
 
-    @if $style == 'small' {
+    @if $size == 'small' {
       img {
         object-fit: cover;
         width: 100px;
         height: 100px;
+      }
+    }
+
+    @if $style == 'circle' {
+      img {
+        border-radius: 1337px;
       }
     }
   }
@@ -153,7 +187,7 @@
     }
 
     @if $border {
-      border-top: .15rem solid rgba(200, 200, 200, .35);
+      border-top: .05rem solid rgba(200, 200, 200, .35);
       margin-top: 0;
       padding-top: 8px;
     }
@@ -184,10 +218,14 @@
   }
 }
 
-@mixin field_info {
-  .views-field-nothing {
+@mixin field_info($class: '.views-field-nothing', $font-size: .8rem) {
+  /*
+    $class - CSS class argument.
+ */
+
+  #{$class} {
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: .8rem;
+    font-size: $font-size;
     font-style: italic;
     margin-top: 8px;
 
@@ -291,6 +329,66 @@
     }
     @include bp-up('xs') {
       margin: 12px 0;
+    }
+  }
+}
+
+/*
+          Blocks unique mixin`s
+ */
+
+@mixin blocks_default_styles($width: 200px, $border: true) {
+  padding: 25px;
+
+  @if $width {
+    width: $width;
+  }
+
+  @if $border {
+    border: 0.05rem solid rgba(100, 100, 100, 0.1);
+  }
+
+  @media screen and (max-width: 600px) {
+    width: auto;
+    margin: 10px 0;
+    padding: 20px 16px;
+  }
+
+  margin-bottom: 20px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@mixin blocks_title {
+  h2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 900;
+    color: $purple;
+    margin: 0 0 20px 0;
+  }
+}
+
+@mixin blocks_button {
+  .view-footer {
+    display: flex;
+    justify-content: flex-start;
+    margin: 20px 0 0 0;
+
+    & a span {
+      background: $black;
+      color: $white;
+      //font-family: 'Source Sans Pro', sans-serif;
+      font-weight: 500;
+      padding: 8px 24px;
+      border-radius: 4px;
+      font-size: .7rem;
+      transition: background 0.5s;
+
+      &:hover {
+        background: $purple;
+      }
     }
   }
 }
