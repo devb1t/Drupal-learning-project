@@ -670,6 +670,7 @@ display:
           separator: ''
           hide_empty: false
       defaults:
+        css_class: false
         style: false
         row: false
         fields: false
@@ -677,6 +678,7 @@ display:
         arguments: false
         filters: false
         filter_groups: false
+      css_class: taxomomy_advertisement
       display_description: ''
       display_extenders: {  }
       displays:
