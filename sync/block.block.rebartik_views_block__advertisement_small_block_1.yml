@@ -18,10 +18,10 @@ provider: null
 plugin: 'views_block:advertisement_small-block_1'
 settings:
   id: 'views_block:advertisement_small-block_1'
-  label: ''
+  label: '- Advertisement -'
   label_display: visible
   provider: views
-  views_label: ''
+  views_label: '- Advertisement -'
   items_per_page: none
 visibility:
   'entity_bundle:node':
