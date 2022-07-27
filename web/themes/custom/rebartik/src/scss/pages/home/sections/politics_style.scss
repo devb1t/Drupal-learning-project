@@ -8,7 +8,6 @@
   @include PS_title;
   @include field_info;
   @include layout_columns(2);
-  @include field_body;
 
   @include block_margins;
   @include bartik_reset_a;
@@ -31,9 +30,11 @@
 
   @include bp-down('xs') {
     @include field_image('small');
+    @include field_body(false);
   }
   @include bp-up('xs') {
     @include field_image();
+    @include field_body(true);
   }
 }
 
@@ -77,6 +78,7 @@
 .second-content.view-style-content-block {
   @include layout_columns(2);
   @include bartik_reset_a;
+  @include field_body(false);
 
   @include field_title(.85rem, .75rem, $border: true) {
     @include bp-down('xs') {
@@ -89,6 +91,7 @@
 
   @include bp-down('xs') {
     @include field_image('small');
+    @include field_body(true);
   }
 
   .views-field-body {
