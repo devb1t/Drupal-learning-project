@@ -1,0 +1,29 @@
+@import '../_global';
+
+.block-views-blockadvertisement-small-block-1 {
+  @include ad_title;
+
+  .views-field-field-ad-image {
+    img {
+      display: block;
+      margin: auto;
+    }
+  }
+
+  @include bp-up('xs') {
+    margin: 0 auto 0 25px;
+  }
+}
+
+.block-views-blockadvertisement-wide-block-1 {
+  @include ad_title;
+
+  margin: 24px 0;
+
+  .views-field-field-ad-image {
+    img {
+      display: block;
+      margin: auto;
+    }
+  }
+}

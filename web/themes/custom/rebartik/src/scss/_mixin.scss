@@ -70,3 +70,12 @@
 /*
           End of content fields mixins
  */
+
+@mixin ad_title {
+  h2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: .65rem;
+    color: #b1a9ac;
+    text-align: center;
+  }
+}
