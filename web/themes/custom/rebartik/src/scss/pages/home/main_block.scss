@@ -8,6 +8,7 @@
     @include field_body;
 
     @include bartik_reset_a;
+    @include link_hover('.views-field-title');
 
     .views-row {
       margin-bottom: 36px;

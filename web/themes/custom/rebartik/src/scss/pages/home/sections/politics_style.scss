@@ -5,11 +5,14 @@
  */
 
 .block-views-blockpolitics-content-block-block-1 {
-  @include block_margins;
   @include PS_title;
   @include field_info;
   @include layout_columns(2);
   @include field_body;
+
+  @include block_margins;
+  @include bartik_reset_a;
+  @include link_hover('.views-field-title');
 
   @include field_title(.85rem, .85rem) {
     @include bp-down('xs') {
@@ -33,10 +36,11 @@
  */
 
 .view-style-content-block {
-  @include block_margins;
   @include PS_title;
-
   @include field_info;
+
+  @include link_hover('.views-field-title');
+  @include block_margins;
 
   .attachment-after {
     padding: 0;
