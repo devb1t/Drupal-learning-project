@@ -1,11 +1,8 @@
-@import '../_variables';
-@import '../_fonts';
-
-.site-footer .block {
-  border: none;
-}
+@import '../_global';
 
 footer {
+  @include bartik_reset_a;
+
   position: relative;
 
   &:before {
@@ -40,12 +37,12 @@ footer {
     margin: 0;
   }
 
-  /*
-    Remove bartik links underline
-   */
-  a, a img {
-    text-decoration: none;
-    border: 0;
+  .region-footer-first, .region-footer-second, .region-footer-third, .region-footer-fourth {
+    margin-top: 0;
+  }
+
+  .region-footer-second, .region-footer-third {
+
   }
 
   .region-footer-second, .region-footer-third, .region-footer-fourth {
@@ -54,8 +51,9 @@ footer {
       font-weight: 900;
       font-size: 1.2rem;
       color: $F_yellow;
-      text-transform: none;
-      border-bottom: none;
+      text-transform: none!important;
+      border-bottom: none!important;
+      margin-top: 0;
     }
   }
 
@@ -75,7 +73,7 @@ footer {
     }
 
     .block-views-blockfooter-social-media-block-1 {
-      margin: 0;
+      margin: 0 !important;
 
       .view-content {
         display: flex;
@@ -100,7 +98,7 @@ footer {
 
       &:hover {
         a, span {
-          color: $F_yellow;
+          color: $F_yellow!important;
         }
       }
     }
@@ -124,8 +122,26 @@ footer {
 
       &:hover {
         a, span {
-          color: $F_yellow;
+          color: $F_yellow!important;
         }
+      }
+    }
+  }
+
+  .region > .views-element-container {
+    border: None;
+  }
+
+  @include bp-up('xs') {
+    .site-footer__top {
+      display: flex;
+
+      .region-footer-second {
+        margin-left: auto;
+      }
+
+      .region-footer-second, .region-footer-third {
+        width: 16.5%;
       }
     }
   }

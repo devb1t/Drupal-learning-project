@@ -1,0 +1,58 @@
+@import '../_global';
+
+.block-views-blockarts-block-1 {
+  @include blocks_default_styles(260px);
+  @include link_hover('.views-field-title');
+
+  @include blocks_title;
+  @include field_title(.75rem, .7rem);
+  @include field_info('.views-field-created', .7rem);
+  @include field_image(None);
+
+  .views-row {
+    margin-bottom: 16px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @include bp-down('xs') {
+    .views-field-field-image {
+      margin-bottom: 8px;
+
+      a {
+        display: block;
+
+        img {
+          display: block;
+          margin-left: auto;
+          width: 100%;
+        }
+      }
+    }
+
+    .views-field-created {
+      margin-top: 4px;
+      font-size: .65rem;
+    }
+  }
+
+  @include bp-up('xs') {
+    margin: 0 30px 0 auto;
+    box-sizing: border-box;
+    padding: 25px;
+
+    .views-field-field-image {
+      a {
+        display: block;
+
+        img {
+          display: block;
+          margin-left: auto;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

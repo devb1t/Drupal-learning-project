@@ -8,7 +8,7 @@
 }
 
 @mixin bartik_reset_a {
-  a, a.link, a img, .views-field-field-image {
+  a, a.link, .views-field-field-image > .field-content > a {
     border: None;
   }
 }
@@ -28,11 +28,147 @@
 }
 
 /*
+          Layouts
+ */
+
+@mixin layout_columns($count) {
+  .views-row {
+    display: flex;
+    flex-direction: column;
+
+    @if $count == 1 {
+      justify-content: center;
+      flex-wrap: nowrap;
+      height: auto;
+
+      .views-field-field-image {
+        width: 100%;
+      }
+    }
+    @else if $count == 2 {
+      justify-content: flex-start;
+      flex-wrap: wrap;
+
+      @include bp-down('xs') {
+        height: 100px;
+
+        .views-field-field-image {
+          width: 30%;
+        }
+
+        .views-field-title, .views-field-nothing, .views-field-body {
+          width: 65%;
+        }
+      }
+
+      @include bp-up('xs') {
+        height: 180px;
+
+        .views-field-field-image {
+          width: 40%;
+        }
+
+        .views-field-title, .views-field-nothing, .views-field-body {
+          width: 55%;
+        }
+      }
+
+      .views-field-title, .views-field-nothing, .views-field-body {
+        margin-left: 5%;
+        box-sizing: border-box;
+      }
+    }
+  }
+}
+
+@mixin flex_layout {
+  @include bp-down('xs') {
+    margin-left: -15px;
+    margin-top: 20px;
+    width: calc(100% + 30px);
+  }
+
+  @include bp-up('xs') {
+    margin-right: 20px;
+  }
+
+  padding: 25px;
+  box-sizing: border-box;
+  background: #F2F2F2;
+}
+
+/* Mixin specially for unique blocks */
+@mixin blocks_layout {
+  .view-content > .views-row {
+    display: flex;
+    flex-wrap: wrap;
+
+    .views-field-title, .views-field-created, .views-field-field-image {
+      margin-top: 0;
+    }
+
+    .views-field-title {
+      flex: 0 1 65%;
+      order: 1;
+    }
+
+    .views-field-created {
+      flex: 0 1 65%;
+      order: 3;
+    }
+
+    .views-field-field-image {
+      flex: 0 1 30%;
+      order: 2;
+      margin-left: 5%;
+    }
+  }
+}
+
+/*
+          End of Layout
+ */
+
+/*
           Content fields mixins
  */
 
-@mixin field_title($mobile_font_size, $desktop_font_size) {
+@mixin block_title {
+  h2, .view-subscribe-to-our-newsletter-homepage .title {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 900;
+    font-size: 1.2rem;
+    color: $purple;
+    text-transform: none;
+    border-bottom: none;
+    margin: 0;
+  }
+}
+
+@mixin field_image($size: None, $style: None) {
+  .views-field-field-image {
+    @include bartik_reset_a;
+
+    @if $size == 'small' {
+      img {
+        object-fit: cover;
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    @if $style == 'circle' {
+      img {
+        border-radius: 1337px;
+      }
+    }
+  }
+}
+
+@mixin field_title($mobile_font_size, $desktop_font_size, $border: false) {
   .views-field-title {
+    @include bartik_reset_a;
+
     font-family: 'Gelasio', serif;
     font-weight: 700;
     line-height: 1.3;
@@ -42,8 +178,6 @@
       color: $black;
     }
 
-    @include bartik_reset_a;
-
     @include bp-down('xs') {
       font-size: $mobile_font_size;
     }
@@ -51,13 +185,47 @@
     @include bp-up('xs') {
       font-size: $desktop_font_size;
     }
+
+    @if $border {
+      border-top: .05rem solid rgba(200, 200, 200, .35);
+      margin-top: 0;
+      padding-top: 8px;
+    }
+  }
+
+  @content
+}
+
+@mixin field_body($display: true) {
+  @if $display {
+    .views-field-body {
+
+      margin-top: 10px;
+
+      strong, p strong {
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: .75rem;
+        font-weight: 400;
+      }
+    }
+  }
+  @else {
+    @include bp-down('xs') {
+      .views-field-body {
+        display: none;
+      }
+    }
   }
 }
 
-@mixin field_info {
-  .views-field-nothing {
+@mixin field_info($class: '.views-field-nothing', $font-size: .8rem) {
+  /*
+    $class - CSS class argument.
+ */
+
+  #{$class} {
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: .8rem;
+    font-size: $font-size;
     font-style: italic;
     margin-top: 8px;
 
@@ -67,15 +235,160 @@
   }
 }
 
+@mixin field_tags {
+  .views-field-field-tags {
+    margin: 5px 0;
+
+    a {
+      font-family: 'Source Sans Pro', sans-serif;
+      font-weight: 400;
+      font-size: .65rem;
+      color: $white;
+      padding: .12rem .2rem;
+      background: $purple;
+    }
+  }
+}
+
 /*
           End of content fields mixins
  */
 
-@mixin ad_title {
+/*
+          Section: Media
+ */
+
+@mixin media_title {
+  h2, .view-subscribe-to-our-newsletter-homepage .title {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 900;
+    font-size: 1.2rem;
+    color: $purple;
+    text-transform: none;
+    border-bottom: none;
+    margin: 0;
+  }
+}
+
+/*
+          End of Section: Media
+ */
+
+/*
+          Politics / Style section
+
+          Appears in ./pages/home/sections/politics_style.scss
+ */
+
+@mixin PS_title {
+  .view-header {
+    position: relative;
+
+    p {
+      font-family: 'Source Sans Pro', sans-serif;
+      font-weight: 900;
+      font-size: 1.2rem;
+      color: $purple;
+      text-transform: none;
+      border-bottom: none;
+      margin: 0;
+      padding: 11px 14px;
+      position: relative;
+      z-index: 1;
+    }
+
+    &:before {
+      content: 'LATEST';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      color: rgba(206,203,194,0.3);
+      font-size: 3.6rem;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-weight: 700;
+      line-height: 1;
+      z-index: 0;
+
+      @include bp-up('xs') {
+        font-size: 4.8rem;
+      }
+    }
+  }
+}
+
+/*
+          End of Politics / Style section
+ */
+
+@mixin block_margins {
+  margin: 30px 0 0 0;
+
+  .views-row {
+    @include bp-down('xs') {
+      margin: 30px 0;
+    }
+    @include bp-up('xs') {
+      margin: 12px 0;
+    }
+  }
+}
+
+/*
+          Blocks unique mixin`s
+ */
+
+@mixin blocks_default_styles($width: 200px, $border: true) {
+  padding: 25px;
+
+  @if $width {
+    width: $width;
+  }
+
+  @if $border {
+    border: 0.05rem solid rgba(100, 100, 100, 0.1);
+  }
+
+  @media screen and (max-width: 600px) {
+    width: auto;
+    margin: 10px 0;
+    padding: 20px 16px;
+  }
+
+  margin-bottom: 20px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@mixin blocks_title {
   h2 {
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: .65rem;
-    color: #b1a9ac;
-    text-align: center;
+    font-size: 1.15rem;
+    font-weight: 900;
+    color: $purple;
+    margin: 0 0 20px 0;
+  }
+}
+
+@mixin blocks_button {
+  .view-footer {
+    display: flex;
+    justify-content: flex-start;
+    margin: 20px 0 0 0;
+
+    & a span {
+      background: $black;
+      color: $white;
+      //font-family: 'Source Sans Pro', sans-serif;
+      font-weight: 500;
+      padding: 8px 24px;
+      border-radius: 4px;
+      font-size: .7rem;
+      transition: background 0.5s;
+
+      &:hover {
+        background: $purple;
+      }
+    }
   }
 }
