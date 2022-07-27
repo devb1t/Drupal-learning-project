@@ -1,10 +1,6 @@
 @import '../_variables';
 @import '../_fonts';
 
-.site-footer .block {
-  border: none;
-}
-
 footer {
   position: relative;
 
@@ -40,22 +36,14 @@ footer {
     margin: 0;
   }
 
-  /*
-    Remove bartik links underline
-   */
-  a, a img {
-    text-decoration: none;
-    border: 0;
-  }
-
   .region-footer-second, .region-footer-third, .region-footer-fourth {
     h2 {
       font-family: 'Source Sans Pro', sans-serif;
       font-weight: 900;
       font-size: 1.2rem;
       color: $F_yellow;
-      text-transform: none;
-      border-bottom: none;
+      text-transform: none!important;
+      border-bottom: none!important;
     }
   }
 
@@ -75,7 +63,7 @@ footer {
     }
 
     .block-views-blockfooter-social-media-block-1 {
-      margin: 0;
+      margin: 0 !important;
 
       .view-content {
         display: flex;
@@ -100,7 +88,7 @@ footer {
 
       &:hover {
         a, span {
-          color: $F_yellow;
+          color: $F_yellow!important;
         }
       }
     }
@@ -124,7 +112,7 @@ footer {
 
       &:hover {
         a, span {
-          color: $F_yellow;
+          color: $F_yellow!important;
         }
       }
     }
