@@ -863,10 +863,12 @@ display:
         groups:
           1: AND
       defaults:
+        css_class: false
         fields: false
         filters: false
         filter_groups: false
         header: false
+      css_class: block-search_page-sidebar
       display_description: ''
       header:
         area:
@@ -1075,9 +1077,11 @@ display:
         groups:
           1: AND
       defaults:
+        css_class: false
         fields: false
         filters: false
         filter_groups: false
+      css_class: block-search_page-ad
       display_description: ''
       display_extenders: {  }
       displays:
@@ -1473,7 +1477,9 @@ display:
           separator: ', '
           field_api_classes: false
       defaults:
+        css_class: false
         fields: false
+      css_class: block-search_results
       display_extenders: {  }
     cache_metadata:
       max-age: -1
