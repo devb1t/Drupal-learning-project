@@ -1,0 +1,114 @@
+@import '../_global';
+
+.view-users-page {
+  /* Custom text field, contains - 'AUTHOR NAME' */
+  .views-field-nothing {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: .7rem;
+    color: rgb(119, 115, 115);
+  }
+
+  .views-field-field-username {
+    font-family: 'Gelasio', serif;
+    font-weight: 900;
+    font-size: 1.1rem;
+    margin: 6px 0;
+  }
+
+  /* Posts count field */
+  .views-field-uid {
+
+
+    display: flex;
+    justify-content: flex-end;
+
+    span {
+      margin-right: 4px;
+    }
+  }
+
+  /* Comments count field */
+  .views-field-uid-1 {
+
+    display: flex;
+
+    span {
+      margin-left: 4px;
+    }
+  }
+
+  .views-field-uid, .views-field-uid-1 {
+    span {
+      padding: 5px 6px 2px 6px;
+      background: $purple;
+      color: $white;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: .6rem;
+      line-height: 1;
+    }
+  }
+
+  .views-field-field-description {
+    font-family: 'Gelasio', serif;
+    font-style: italic;
+    color: rgb(119, 115, 115);
+    text-align: center;
+    font-size: .75rem;
+    margin-top: 16px;
+
+    @include bp-up('xs') {
+      .field-content {
+        max-width: 600px;
+        margin: auto;
+      }
+    }
+  }
+
+  .views-field-field-website-url {
+    @include bartik_reset_a;
+
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: italic;
+    font-size: .7rem;
+    margin-top: 24px;
+
+    a {
+      color: $black;
+    }
+  }
+
+  /*
+    Layout
+   */
+  .views-row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .views-field-nothing, .views-field-field-username, .views-field-field-description, .views-field-field-website-url {
+    flex: 0 1 100%;
+    box-sizing: border-box;
+
+    text-align: center;
+  }
+
+  .views-field-uid, .views-field-uid-1 {
+    flex: 0 1 50%;
+    box-sizing: border-box;
+  }
+}
+
+.block-views-blockuser-social-media-block-1 {
+  .view-content {
+    display: flex;
+    justify-content: center;
+  }
+
+  .views-row {
+    @include bartik_reset_a;
+
+    margin: 0 6px;
+    width: 16px;
+    height: 16px;
+  }
+}

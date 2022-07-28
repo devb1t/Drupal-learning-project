@@ -19,6 +19,11 @@
 @import 'pages/home/sections/media/stay_connected';
 
 /*
+  User page
+ */
+@import 'pages/user';
+
+/*
   Blocks
  */
 @import 'blocks/arts';
@@ -29,3 +34,4 @@
 @import 'blocks/magazine';
 @import 'blocks/business';
 @import 'blocks/editor_picks';
+@import 'blocks/latest_news';
