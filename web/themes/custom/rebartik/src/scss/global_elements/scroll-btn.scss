@@ -1,0 +1,29 @@
+@import '../_global';
+
+#scrollToTop {
+  position: fixed;
+  right: 8px;
+  bottom: 8px;
+  width: 42px;
+  height: 42px;
+  background: $purple;
+  border-radius: 1337px;
+  opacity: 0;
+  z-index: 1337;
+  transition:
+    cubic-bezier(.25,.1,.25,1) transform 1.2s,
+    cubic-bezier(.25,.1,.25,1) opacity 1s;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background: url(../assets/icons/arrow-up.png);
+    background-size: cover;
+    z-index: 1448;
+  }
+}
