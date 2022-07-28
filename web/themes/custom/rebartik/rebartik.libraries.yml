@@ -2,3 +2,10 @@ styles:
   css:
     theme:
       dist/style.css: {}
+  js:
+    dist/javascript.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/once
+    - core/jquery.once

@@ -6,3 +6,9 @@ sites/**/libraries/**/*
 profiles/**/libraries/**/*
 **/js_test_files/**/*
 **/node_modules/**/*
+
+themes/custom/**/dist
+themes/custom/**/node_modules
+themes/custom/**/templates
+themes/custom/**/webpack.config.js
+themes/custom/**/src/index.js
