@@ -7,7 +7,7 @@ article.profile {
   }
 }
 
-.block-views-blockuser-articles-block-1 {
+.block-views-blockuser-articles-block-1, .view-taxonomy-term.view-display-id-page_1 > .view-content, .view-search-block > .view-content {
   @include field_info;
   @include layout_columns(2);
 
